@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      # Monta TODA la carpeta del proyecto en /notebooks dentro del contenedor.
+      # Así quedan disponibles tp-1/notebooks, tp-2/notebooks y cualquier
+      # tp-N que agregues en el futuro, sin tener que editar este archivo.
+      - .:/notebooks

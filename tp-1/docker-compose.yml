@@ -1,8 +1,0 @@
-services:
-  jupyter:
-    build: .
-    ports:
-      - "8888:8888"
-    volumes:
-      # Tus notebooks locales se sincronizan con /notebooks dentro del contenedor.
-      - ./notebooks:/notebooks
