@@ -8,6 +8,7 @@ function visualizar_cadena(y_opt)
     # Calcular posiciones (xᵢ, yᵢ_acum) de cada nodo
     xs = [0.0]
     ys_accum = [0.0]
+    N = length(y_opt)
     for i in 1:N
         push!(xs, xs[end] + sqrt(max(1.0 - y_opt[i]^2, 0.0)))
         push!(ys_accum, ys_accum[end] + y_opt[i])
