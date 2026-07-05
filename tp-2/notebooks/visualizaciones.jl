@@ -41,10 +41,7 @@ end
 ###Funcion para visualizar el recorrido del camino calculado por la heuristica###
 ### Toma como argumento a la f y al camino (puntos) dado por el método####
 
-function visualizar_camino(f,path)
-    xs = -2.0:0.05:2.0 ### cambiar a segun corresponda
-    ys = -2.0:0.05:2.0
-
+function visualizar_camino(f, path, xs, ys)
     # Gráfico de curvas de nivel limpio
     p = contour(xs, ys, (x,y) -> f([x,y]),
         levels=30,
